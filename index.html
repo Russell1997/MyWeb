@@ -7,14 +7,22 @@
 		<link rel="stylesheet" href="0.0/button.css" type="text/css" />
 		<link rel="stylesheet" href="0.0/border.css" type="text/css" />
 	</head>
-<!-- 	<script language="javascript">	
+	<script language="javascript">	
 	function exec1(command) 
 	{     
 	  var ws = new ActiveXObject("WScript.Shell");      
 	  ws.run(command);
 	}
-	</script>   -->
+	</script>  
 	<script language="JavaScript">   
+	<script>
+	function myFunction() 
+	{
+	  var x = document.getElementById("urlinput").value;
+	  document.getElementById("demo").innerHTML = x;
+	}
+	</script>
+	<script>
 	function saveText()  
 	{
 	  var strHTML= document.getElementById("urlinput").value;//获取内容
@@ -29,9 +37,10 @@
 	<body>
 		<div class="left">
 			<input class="leftinput" id='urlinput' placeholder="请输入网页URL";>
-			<input class='button' value='get' type='button' onclick="saveText()">
+			<input class='button' value='get' type='button' onclick="myFunction()">
 			<!-- <input class="button" value='submit' type='button' onclick="exec1('python C:\Users\57554\Desktop\毕设\HX网页\wechatcrawler.py')"/> -->
-			<textarea class="leftborder"></textarea>			
+			<textarea class="leftborder"></textarea>
+			<p id="demo"></p>
 		</div>
 		<div class="right">
 			<textarea class="rightborder"></textarea>			
